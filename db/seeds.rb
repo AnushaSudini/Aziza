@@ -61,7 +61,7 @@ test = Test.create(:test_name => "End of class 2 Quiz", :status => "deactivated"
 
 =begin
 mcq = MultipleChoiceQuestion.create(:test_id => "1", :description => "How many instances of an abstract class can be created?", :option_1 => "1", :option_2 => "5", :option_3 => "13", :option_4 => "0", :answer => "0" )
-mcq = MultipleChoiceQuestion.create(:test_id => "1", :description => "The process by which one object can acquire the properties of another object", :option_1 => "Inheritance", :option_2 => "Encapsulation", :option_3 => "Polymorphism", :option_4 => "Data hiding", :answer => "Inheritance" )
+mcq = MultipleChoiceQuestion.create(:test_id => "1", :description => "The process by which one object can acquire the properties of another object is called as", :option_1 => "Inheritance", :option_2 => "Encapsulation", :option_3 => "Polymorphism", :option_4 => "Data hiding", :answer => "Inheritance" )
 mcq = MultipleChoiceQuestion.create(:test_id => "1", :description => "Here is a method definition:
 method_name(parameter1: datatype1, parameter2: datatype2): Return_Type1
 Which of the following has a different signature?

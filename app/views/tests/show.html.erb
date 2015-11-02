@@ -10,7 +10,7 @@
   <%end %>
   <%if current_user.student?%>
   <h4>
-    Marks Obtained : <mark><%= get_student_test_result(@test.id) %></mark>
+    Total marks obtained for this quiz: <mark><%= get_student_test_result(@test.id) %></mark>
   </h4>
   <%end %>
 </div>
