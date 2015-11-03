@@ -9,6 +9,8 @@ $( document ).ready(function() {
     $('#correct_student').hide();
     $('#wrong_student').hide();
     $('#attempted_student').hide();
+    $('#correct_answer').hide();
+
 
     $("#button_one").click(function(event){
         questionType = $('#selectQuestion').val()
@@ -33,6 +35,10 @@ $( document ).ready(function() {
 
     $('#short_answer').click(function toggle_stuff() {
         $('#attempted_student').toggle();
+    });
+
+    $('#mc_answer').click(function toggle_stuff() {
+        $('#correct_answer').toggle();
     });
 
     $('.correct_option').css({ 'color': 'green'});

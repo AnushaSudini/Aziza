@@ -105,11 +105,13 @@
   </div>
   </br>
   <%if current_user.teacher?%>
-  <div class="col-md-12">
-    <p>
-      <strong>Answer:</strong>
-      <%= tq.answer %>
-    </p>
+  <div>
+     <div style="display: inline-block;" class="col-md-12">
+     <%= link_to 'Answer:',"#", id: "mc_answer" %>
+     </div>
+     <div style="display: inline-block;" class="col-md-12" id="correct_answer">
+          <%= tq.answer %>
+     </div>
   </div>
   <%end%>
   <%if current_user.teacher? and @test.report == "true"%>
@@ -163,8 +165,8 @@
         <% end %>
       </tbody>
     </table>
-  </div>
   <%end %>
+
 
   <%if current_user.teacher? and @test.report != "true" %>
   <div class="col-md-6 col-sm-6 pull-right">
