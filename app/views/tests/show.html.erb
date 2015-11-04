@@ -10,7 +10,7 @@
   <%end %>
   <%if current_user.student?%>
   <h4>
-    Total marks obtained for this quiz: <mark><%= get_student_test_result(@test.id) %></mark>
+    Total Marks Obtained for this test: <mark><%= get_student_test_result(@test.id) %></mark>
   </h4>
   <%end %>
 </div>
@@ -45,7 +45,7 @@
     <div class="col-md-12">
       <div class="col-md-8">
         <p>
-          <br><strong>Question </strong>
+          <br><h4>Question <%=@count%></h4>
           <%= tq.description %>
         </p>
       </div>
@@ -105,13 +105,11 @@
   </div>
   </br>
   <%if current_user.teacher?%>
-  <div>
-     <div style="display: inline-block;" class="col-md-12">
-     <%= link_to 'Answer:',"#", id: "mc_answer" %>
-     </div>
-     <div style="display: inline-block;" class="col-md-12" id="correct_answer">
-          <%= tq.answer %>
-     </div>
+  <div class="col-md-12">
+    <p>
+      <strong>Answer:</strong>
+      <%= tq.answer %>
+    </p>
   </div>
   <%end%>
   <%if current_user.teacher? and @test.report == "true"%>
@@ -165,8 +163,8 @@
         <% end %>
       </tbody>
     </table>
+  </div>
   <%end %>
-
 
   <%if current_user.teacher? and @test.report != "true" %>
   <div class="col-md-6 col-sm-6 pull-right">
